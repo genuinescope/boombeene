@@ -150,7 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </li>
-                            <li><a class="color4" href="404.html">Accessories</a></li>	
+                            <li><a class="color6" href="404.html">Accessories</a></li>	
                             <li><a class="color4" href="404.html">About Us</a></li>	
                             <li><a class="color6" href="contact.html">Conact</a></li>
                         </ul> 

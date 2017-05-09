@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Binary admin</a> 
+                    <a class="navbar-brand" href="<?php echo $this->config->item("base_url"); ?>admin">Boombeene</a> 
                 </div>
                 <div style="color: white;
                      padding: 15px 50px 5px 50px;
@@ -106,8 +106,8 @@
                 <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Admin Dashboard</h2>   
-                            <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                            <h2>User Dashboard</h2>   
+                            <h5>Welcome Rawand , Love to see you back. </h5>
                         </div>
                     </div>              
                     <!-- /. ROW  -->
