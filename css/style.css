@@ -24,10 +24,10 @@ body a{
 	padding:7em 0;
 }
 .header_top{
-	background:#EBDF75;
+	background:#333;
 }
 .span_1{
-	background:#15be74;
+	background:#C90000;
 	padding:2em 0;
 }
 .logo{
@@ -54,7 +54,7 @@ body a{
 	-webkit-appearance: none;
 }
 .search input[type="submit"] {
-	background: url('../images/search.png') no-repeat 24px 10px #e05b5b;
+	background: url('../images/search.png') no-repeat 24px 10px #C90000;
 	padding: 12.5px 38px;
 	border: none;
 	cursor: pointer;
@@ -80,12 +80,12 @@ ul.bag:hover li.bag_right p{
 i.bag_left{
 	width: 80px;
     height: 46px;
-    background: url(../images/bag.png)no-repeat 29px 6px #e05b5b;
+    background: url(../images/bag.png)no-repeat 29px 6px #009bc9;
     float: left;
     border-right: 1px solid #fff;
 }
 ul.bag li.bag_right{
-	background:#e05b5b;
+	background:#079488;
 	padding:16px 10px;
 	overflow:hidden;
 }
@@ -138,7 +138,7 @@ ul.bag li.bag_right p{
   background: none;
   border: none;
   outline: none;
-  color: #000;
+  color: #fff;
   font-size: 0.85em;
   margin: 0 5% 0 0;
   display: block;
@@ -166,7 +166,7 @@ ul.bag li.bag_right p{
 }
 .register-info ul li a {
   border: 2px solid #e05b5b;
-  color: #000;
+  color: #fff;
   padding: 5px 12px;
   text-decoration: none;
   font-size: 0.85em;
@@ -234,7 +234,7 @@ ul.bag li.bag_right p{
 }
 .btn-1 {
 	color: #fff;
-	background:#15be74;
+	background:#079488;
 }
 .banner_desc a, .span_3 a{ 
 	position: relative;
@@ -299,7 +299,7 @@ ul.grid_2 li img{
 }
 span.btn5 {
   color: #fff;
-  background: #15be74;
+  background: #333333;
   padding: 7px 25px;
   margin: 1em 0;
   font-weight: normal;
