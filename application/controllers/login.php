@@ -20,12 +20,11 @@ class Login extends CI_Controller {
     public function check_login() {
         $checkuser = $this->model_login->check_user($this->input->post("username"), $this->input->post("password"));
         if ($checkuser == "1") {
-            redirect($this->config->item("base_url") . "admin/home/slider");
+            redirect($this->config->item("base_url") . "my_account/new_order");
         }
         if ($checkuser == "0") {
-            $msg = '<div class="alert alert-danger"> Invalid Login </div>';
-            $this->session->set_flashdata('msg', $msg);
-            redirect($this->config->item("base_url") . "admin/login");
+            $this->session->set_flashdata('msg', $this->lang->line('invalid_user_login'));
+            redirect($this->config->item("base_url") . "login");
         }
     }
 
@@ -37,7 +36,7 @@ class Login extends CI_Controller {
         $this->session->unset_userdata('loggedin');
         $this->session->unset_userdata('admin');
         $this->session->sess_destroy();
-        redirect($this->config->item("base_url") . "admin/login");
+        redirect($this->config->item("base_url") . "login");
     }
 
 }

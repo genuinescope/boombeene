@@ -172,14 +172,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="clearfix"></div>
                         </div>
                         <div class="register-info">
-                            <ul>
-                                <li><a href="<?php echo $this->config->item("base_url"); ?>login">Login</a></li>
+                            <ul style="float: right;">
+                                <li>
+                                    <a href="<?php echo $this->config->item("base_url"); ?>login">Login</a>
+                                </li>
+                                
                                 <!--<li><a href="login.html">Register</a></li>-->
                             </ul>
 
                         </div>
                         <div class="clearfix"> </div>
-                    </div>
+                    </div><span class='register_text'>Don't you have an account Yet? <a>Register</a></span>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="header_bootm">

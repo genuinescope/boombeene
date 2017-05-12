@@ -164,6 +164,20 @@ ul.bag li.bag_right p{
     margin:0;
     list-style:none;
 }
+.register_text{
+    color:#fff;
+    float:right;
+    padding: 0 10px 3px 5px;
+}
+.register_text a {
+    cursor: pointer;
+    color:#4ecbf1;
+    text-decoration: none;
+}
+.register_text a:hover {
+    text-decoration: underline;
+}
+
 .register-info ul li a {
     border: 2px solid #e05b5b;
     color: #fff;
