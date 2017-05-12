@@ -20,7 +20,7 @@ class Login extends CI_Controller {
     public function check_login() {
         $checkuser = $this->model_login->check_user($this->input->post("username"), $this->input->post("password"));
         if ($checkuser == "1") {
-            redirect($this->config->item("base_url") . "my_account/new_order");
+            redirect($this->config->item("base_url") . "my_account/order/neworder");
         }
         if ($checkuser == "0") {
             $this->session->set_flashdata('msg', $this->lang->line('invalid_user_login'));

@@ -5,7 +5,7 @@ Date: 9/23/12
 Version: 1.0
 */
 
-class Admin extends CI_Controller{
+class New_Order extends CI_Controller{
 	
 	function __construct(){
 		parent::__construct();
@@ -20,7 +20,7 @@ class Admin extends CI_Controller{
 	
 	function index(){
 		//$data['main_content'] = 'dashboard';
-		$this->load->view('dashboard');
+		$this->load->view('myaccount/dashboard');
 	}
 		
 }
