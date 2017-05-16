@@ -51,20 +51,20 @@
                         </li>
 
                         <li>
-                            <a class="active-menu" href="ui.html"><i class="fa fa-tasks fa-3x"></i> New Order</a>
+                            <a class="active-menu" href="<?php echo $this->config->item("base_url"); ?>my_account/new_order"><i class="fa fa-tasks fa-3x"></i> New Order</a>
                         </li>
                         <li>
-                            <a   href="<?php echo $this->config->item("base_url"); ?>admin"><i class="fa fa-table fa-3x"></i> My Orders</a>
+                            <a   href="<?php echo $this->config->item("base_url"); ?>my_account/orders/list"><i class="fa fa-table fa-3x"></i> My Orders</a>
                         </li>
 
                         <li>
-                            <a  href="tab-panel.html"><i class="fa fa-money fa-3x"></i> Add Credit</a>
+                            <a  href="<?php echo $this->config->item("base_url"); ?>my_account/add_credits"><i class="fa fa-money fa-3x"></i> Add Credit</a>
                         </li>
                         <li  >
-                            <a   href="chart.html"><i class="fa fa-dollar fa-3x"></i> Transactions</a>
+                            <a   href="<?php echo $this->config->item("base_url"); ?>orders/transactions"><i class="fa fa-dollar fa-3x"></i> Transactions</a>
                         </li>	
                         <li  >
-                            <a  href="table.html"><i class="fa fa-shopping-cart fa-3x"></i> Market</a>
+                            <a  href="<?php echo $this->config->item("base_url"); ?>market"><i class="fa fa-shopping-cart fa-3x"></i> Market</a>
                         </li>
 
 
