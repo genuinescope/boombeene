@@ -33,6 +33,7 @@ class New_Order extends CI_Controller {
     }
 
     function readEbayData($url) {
+
         $ch = curl_init();
         $timeout = 20;
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -52,14 +53,15 @@ class New_Order extends CI_Controller {
 
         $ebayArr = array();
         $title_element = $dom->getElementById("itemTitle");
+
         $ebayTitle = trim(str_replace("Details about", " ", strip_tags($title_element->nodeValue)));
         $ebay_price = $dom->getElementById("prcIsum")->getAttribute("content");
         $ebay_image = $dom->getElementById("icImg")->getAttribute("src");
-        $ebayArr["title"] = $ebayTitle;
-        $ebayArr["price"] = $ebay_price;
-        $ebayArr["img"] = $ebay_image;
+        $ebayArr[0] = $ebayTitle;
+        $ebayArr[1] = $ebay_price;
+        $ebayArr[2] = $ebay_image;
 
-        print_r($ebayArr);
+        echo(json_encode($ebayArr));
 
 # Iterate over all the <a> tags
 //        foreach ($dom->getElementsByTagName('a') as $link) {

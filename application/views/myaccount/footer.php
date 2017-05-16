@@ -8,8 +8,8 @@
         <!-- METISMENU SCRIPTS -->
         <script src="<?php echo $this->config->item("base_url");?>js/jquery.metisMenu.js"></script>
         <!-- MORRIS CHART SCRIPTS -->
-        <script src="<?php echo $this->config->item("base_url");?>js/morris/raphael-2.1.0.min.js"></script>
-        <script src="<?php echo $this->config->item("base_url");?>js/morris/morris.js"></script>
+<!--        <script src="<?php echo $this->config->item("base_url");?>js/morris/raphael-2.1.0.min.js"></script>
+        <script src="<?php echo $this->config->item("base_url");?>js/morris/morris.js"></script>-->
         <!-- CUSTOM SCRIPTS -->
         <script src="<?php echo $this->config->item("base_url");?>js/custom.js"></script>
 

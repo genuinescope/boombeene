@@ -34,7 +34,7 @@ $this->load->view('myaccount/header');
                                     <div class="form-group">
                                         <label class="control-label col-sm-2" for="email">Item Web Link:</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="weblink"  name='weblink' onblur="extractURLData(this.value)">
+                                            <input type="text" class="form-control" id="weblink"  name='weblink' onblur="return extractURLData(this.value)">
                                             <span id="loading" style="display:none;">Loading <img src="<?php echo $this->config->item("base_url"); ?>images/loading.gif" height="50" ></span>
                                         </div>
                                     </div>
@@ -44,16 +44,16 @@ $this->load->view('myaccount/header');
                                             <input type="text" class="form-control" id="itemName"  name='itemName'>
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                    <div class="form-group">
                                         <label class="control-label col-sm-2" for="pwd">Item Price($):</label>
                                         <div class="col-sm-8"> 
                                             <input type="text" class="form-control" id="itemPrice"  name='itemPrice'>
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                    <div class="form-group">
                                         <label class="control-label col-sm-2" for="pwd">Item Picture:</label>
                                         <div class="col-sm-8" id="itemImg"> 
-                                           
+
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -135,18 +135,24 @@ $this->load->view('myaccount/header');
             $.ajax({
                 method: "POST",
                 data: {linkURL: linkURL, urlType: urlType},
-                url: "<?php echo $this->config->item("base_url"); ?>my_account/new_order/loadData"
-
+                url: "<?php echo $this->config->item("base_url"); ?>my_account/new_order/loadData",
+                success: function(data) {
+                    
+                    var replyVal = JSON.parse(data);
+                    $("#itemName").val(replyVal[0]);
+                    $("#itemPrice").val(replyVal[1]);
+                    $("#itemImg").html("<img src='" + replyVal[2] + "'>");
+                    $("#loading").css("display", "none");
+                },
+                error: function(e) {
+                    console.log("error-" + e.message);
+                }
+                
             }).done(function(msg) {
-                console.log(msg);
-             
-               
-               // console.log(obj);
-//                $("#loading").css("display", "none");
-//                $("#itemName").val(msg["title"]);
-//                $("#itemPrice").val(msg["price"]);
-//                $("#itemImg").html("<img src='"+msg["img"]+"'>");
+                // console.log(obj);
+//                
             });
+            return false;
         }
     }
 </script>

@@ -11,3 +11,10 @@ CREATE TABLE `users` (
 INSERT INTO `boombeene`.`users` (`id`, `email`, `password`, `active`, `created_date`) VALUES (NULL, 'nimesha.priyangi@gmail.com', MD5('123'), '1', CURRENT_TIMESTAMP);
 
 ALTER TABLE `users` CHANGE `password` `pwd` VARCHAR(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+
+
+
+
+
+
