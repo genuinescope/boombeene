@@ -113,6 +113,7 @@ class New_Order extends CI_Controller {
         $data = array(
             'web_link' => $this->input->post('weblink'),
             'item_name' => $this->input->post('itemName'),
+            'userId' => $this->session->userdata("userid"),
             'item_price' => $this->input->post('itemPrice'),
             'item_image' => $this->input->post('itemImage'),
             'item_data_text' => $this->input->post('hdn_item_data_text'),
@@ -126,8 +127,9 @@ class New_Order extends CI_Controller {
        
         $output = $this->model_order->save_new_order($data);
         if ($output == "1") {
-            $this->session->set_flashdata('success', "1");
-            redirect($this->config->item("base_url") . "my_account/orders/list");
+            
+            $this->session->set_flashdata('msg', $this->lang->line('successfully_added'));
+            redirect($this->config->item("base_url") . "my_account/orders/all");
         }
     }
 

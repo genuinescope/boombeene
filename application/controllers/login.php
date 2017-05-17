@@ -31,8 +31,8 @@ class Login extends CI_Controller {
     function logout() {
         $this->session->set_userdata("loggedin", "0");
         $this->session->set_userdata("admin", "0");
-        $this->session->set_userdata("user_id", "");
-        $this->session->unset_userdata('user_id');
+        $this->session->set_userdata("userid", "");
+        $this->session->unset_userdata('userid');
         $this->session->unset_userdata('loggedin');
         $this->session->unset_userdata('admin');
         $this->session->sess_destroy();

@@ -26,21 +26,21 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo $this->config->item("base_url"); ?>my_account/new_order">Boombeene</a> 
-               
+
                 </div>
                 <div style="color: white;
                      padding: 15px 50px 5px 50px;
                      float: right;
                      font-size: 16px;">             
                     <select class="drop-down drop-down-in" style="color:#000">
-                                <option value="1">English</option>
-                                <option value="2">French</option>
-                                <option value="3">German</option>
-                            </select> Hi Rawand, &nbsp; <a href="<?php echo $this->config->item("base_url"); ?>login" class="btn btn-danger square-btn-adjust">Logout</a>
-                
+                        <option value="1">English</option>
+                        <option value="2">French</option>
+                        <option value="3">German</option>
+                    </select> Hi Rawand, &nbsp; <a href="<?php echo $this->config->item("base_url"); ?>login/logout" class="btn btn-danger square-btn-adjust">Logout</a>
+
 
                 </div>
-                     
+
             </nav>   
             <!-- /. NAV TOP  -->
             <nav class="navbar-default navbar-side" role="navigation">
@@ -51,21 +51,33 @@
                         </li>
 
                         <li>
-                            <a class="active-menu" href="<?php echo $this->config->item("base_url"); ?>my_account/new_order"><i class="fa fa-tasks fa-3x"></i> New Order</a>
+                            <a class="active-menu" href="<?php echo $this->config->item("base_url"); ?>my_account/new_order">
+                                <i class="fa fa-tasks fa-3x"></i> 
+                                <span class="lblnav"> New Order </span>
+                            </a>
                         </li>
                         <li>
-                            <a   href="<?php echo $this->config->item("base_url"); ?>my_account/orders/list"><i class="fa fa-table fa-3x"></i> My Orders</a>
+                            <a   href="<?php echo $this->config->item("base_url"); ?>my_account/orders/all">
+                                <i class="fa fa-table fa-3x"></i> 
+                                <span class="lblnav"> My Orders </span>
+                            </a>
                         </li>
 
                         <li>
-                            <a  href="<?php echo $this->config->item("base_url"); ?>my_account/add_credits"><i class="fa fa-money fa-3x"></i> Add Credit</a>
+                            <a  href="<?php echo $this->config->item("base_url"); ?>my_account/add_credits">
+                                <i class="fa fa-money fa-3x"></i>
+                                <span class="lblnav"> Add Credit </span>
+                            </a>
                         </li>
                         <li  >
-                            <a   href="<?php echo $this->config->item("base_url"); ?>orders/transactions"><i class="fa fa-dollar fa-3x"></i> Transactions</a>
+                            <a   href="<?php echo $this->config->item("base_url"); ?>orders/transactions">
+                                <i class="fa fa-dollar fa-3x"></i>
+                                <span class="lblnav"> Transactions </span>
+                            </a>
                         </li>	
-                        <li  >
-                            <a  href="<?php echo $this->config->item("base_url"); ?>market"><i class="fa fa-shopping-cart fa-3x"></i> Market</a>
-                        </li>
+                        <!--                        <li  >
+                                                    <a  href="<?php echo $this->config->item("base_url"); ?>market"><i class="fa fa-shopping-cart fa-3x"></i> Market</a>
+                                                </li>-->
 
 
                         <!--                        <li>

@@ -19,8 +19,13 @@ $this->load->view('myaccount/header');
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 headings">
                                 <h3>New Order</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--                                <h3>New Order</h3>-->
                                 <form class="form-horizontal" method="POST" action="<?php echo $this->config->item("base_url"); ?>my_account/new_order/save_order">
                                     <div class="form-group" >
 
@@ -65,7 +70,7 @@ $this->load->view('myaccount/header');
 
                                             </select>
                                         </div>
-                                       
+
                                     </div>
 
                                     <div class="form-group optional">
