@@ -11,7 +11,14 @@ class model_login extends CI_Model {
         $result = mysql_query($sql3);
         if (mysql_num_rows($result) > 0) {
             $row = mysql_fetch_assoc($result);
-            $this->session->set_userdata("loggedin", "1");
+            if($username=="admin"){
+                $this->session->set_userdata("admin", "1");
+                $this->session->set_userdata("loggedin", "1");
+            }
+            else{
+                $this->session->set_userdata("loggedin", "1");
+            }
+            
             $this->session->set_userdata("userid", $row["id"]);
             return "1";
         } else {

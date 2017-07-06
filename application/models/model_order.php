@@ -16,7 +16,12 @@ class model_order extends CI_Model {
 
     function get_all_orders() {
         $query = $this->db->get_where('orders', array('userId' => $this->session->userdata("userid")));
-        
+
+        return $query->result_array();
+    }
+
+    function get_all_user_orders() {
+        $query = $this->db->get_where('orders');
         return $query->result_array();
     }
 
